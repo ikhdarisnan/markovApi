@@ -21,7 +21,13 @@ app.config['MYSQL_DB'] = 'db_kasir_pulsa'
 
 mysql = MySQL(app)
 
-
+@app.route('/')
+def index():
+    return '<h1>This Site already used for Kasir Pulsa App. Mari doakan kelulusan idar! </h1> <h2>Thank you for visiting this site</h2>'
+    
+    
+    
+    
 @app.route('/getModelMarkov/<string:waktu>', methods=['GET'])
 def route(waktu):
     global resultdataTotal, resultdataTrainState, resultdataTestState, resultmyState, resultlastState, resultanomalyDetected, resultnormalDetected
